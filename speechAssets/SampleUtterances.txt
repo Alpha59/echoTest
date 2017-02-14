@@ -1,0 +1,9 @@
+CallContactIntent call {ContactName}
+CallContactIntent please call {ContactName}
+
+TextContactIntent text {ContactName}
+TextContactIntent please text {ContactName}
+
+EmergencyIntent help
+
+FalseAlarmIntent test system

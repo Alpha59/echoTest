@@ -1,0 +1,33 @@
+{
+  "intents": [
+    {
+      "intent": "CallContactIntent",
+      "slots": [
+        {
+          "name": "ContactName",
+          "type": "AMAZON.FictionalCharacter"
+        }
+      ]
+    },{
+      "intent": "TextContactIntent",
+      "slots": [
+        {
+          "name": "ContactName",
+          "type": "AMAZON.FictionalCharacter"
+        }
+      ]
+    },{
+      "intent": "EmergencyIntent"
+    },{
+      "intent": "FalseAlarmIntent"
+    },/*{
+      "intent": "NoiseIntent"
+    },*/{
+      "intent": "AMAZON.HelpIntent"
+    },{
+      "intent": "AMAZON.StopIntent"
+    },{
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
