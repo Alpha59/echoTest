@@ -1,0 +1,9 @@
+{
+  "name": "EHelp",
+  "description": "Enis's project idea for a helper alexa app",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::205416670712:role/EHelp_lambda_function",
+  "environment": {},
+  "profile": "default"
+}
