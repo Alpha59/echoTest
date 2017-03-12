@@ -6,11 +6,6 @@ module.exports = {
             ' is higher or lower. Do you want to start the game?';
         this.emit(':ask', message, message);
     },
-    'SessionEndedRequest': function () {
-        console.log('session ended!');
-        this.attributes['endedSessionCount'] += 1;
-        this.emit(':saveState', true);
-    },
     'Unhandled': function() {
         var message = 'Say yes to continue, or no to end the game.';
         this.emit(':ask', message, message);
