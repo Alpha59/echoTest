@@ -1,0 +1,7 @@
+<script>
+    (function(){
+        var lang = localStorage.getItem('lang') || 'en';
+        console.log(lang);
+        window.location.replace(`./${lang}/index.html`);
+    })();
+</script>

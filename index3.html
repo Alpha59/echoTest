@@ -1,0 +1,28 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="https://www.amazon.com/ap/oa?client_id=amzn1.application-oa2-client.035d6aa34c2448bb9f06415ad44105f8&scope=profile&response_type=token&state=208257577ll0975l93l2l59l895857093449424&redirect_uri=https://s3.amazonaws.com/enis-help-application/index3.html">Login With Amazon Simple...</a>
+ </body>
+<script>
+    function getJsonFromUrl() {
+          var query = location.hash.substr(1);
+          var result = {};
+          query.split("&").forEach(function(part) {
+            var item = part.split("=");
+            result[item[0]] = decodeURIComponent(item[1]);
+          });
+          return result;
+    }
+    if ( window.location.hash && window.location.hash.length > 0 ) {
+        $.get(`https://api.amazon.com/auth/O2/tokeninfo?access_token=${(getJsonFromUrl()).access_token}`)
+            .done(function (data){
+                console.log(data);
+            })
+            .fail(function (err){
+                console.log(err);
+            });
+    }
+    console.log(window.location)
+</script>
